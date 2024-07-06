@@ -14,7 +14,7 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <button class="login-button">Login</button>
+        <button class="login-button" onclick="redirectToLogin()">Login</button>
     </nav>
     
     <div class="content-container">
@@ -69,5 +69,10 @@
             </div>
         </div>
     </div>
+    <script>
+        function redirectToLogin() {
+            window.location.href = 'login.html';
+        }
+    </script>
 </body>
 </html>
