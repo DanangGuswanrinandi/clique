@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    font-family: montserrat, sans-serif;
+}
+
+.navbar {
+    background-color: #EEE5E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    color: #003744;
+    font-weight: 700;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #003744;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.login-button {
+    background-color: #003744;
+    color: #ffffff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease; /* Animasi transisi saat hover */
+}
+
+.login-button:hover {
+    background-color: #CC2936; /* Warna background saat tombol dihover */
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh; /* Menggunakan tinggi viewport penuh untuk content-container */
+    background-image: url('img/background top.jpg'); /* Ganti dengan path yang sesuai */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    box-sizing: border-box; /* Memastikan padding termasuk dalam lebar dan tinggi */
+}
+
+.text-container {
+    color: #ffffff;
+    padding-left: 40px;
+    max-width: 70%; /* Mengatur lebar maksimum text-container */
+    overflow: hidden; /* Mengatur overflow jika teks melebihi lebar maksimum */
+    padding-bottom: 30px;
+
+}
+
+.text-container h1 {
+    color: #003744;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bolder;
+    overflow: hidden; /* Mengatur overflow untuk judul jika teks melebihi lebar */
+    white-space: nowrap; /* Mencegah wrap jika teks judul terlalu panjang */
+    text-overflow: ellipsis; /* Menampilkan titik elipsis jika teks judul terlalu panjang */
+    padding-bottom: 5px;
+}
+
+.text-container p {
+    color: #000000;
+    font-size: 18px;
+    margin: 10px 0;
+    overflow: hidden; /* Mengatur overflow untuk paragraf jika teks melebihi lebar */
+    text-overflow: ellipsis; /* Menampilkan titik elipsis jika teks paragraf terlalu panjang */
+    padding-bottom: 5px;
+}
+
+/* CSS untuk tombol Cliq Now */
+.cliq-now-button {
+    background-color: #003744;
+    color: #ffffff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease; /* Animasi transisi saat hover */
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden; /* Mengatur overflow untuk memastikan ikon tidak mempengaruhi ukuran tombol */
+    position: relative; /* Menetapkan posisi relatif untuk kontainer tombol */
+}
+
+.cliq-now-button:hover {
+    background-color: #CC2936; /* Warna background saat tombol dihover */
+}
+
+/* CSS untuk teks "Cliq Now" di dalam tombol */
+.cliq-now-button span {
+    text-align: left; /* Menetapkan teks menjadi rata kiri */
+    margin-left: -23px;
+    margin-right: 20px;
+}
+
+/* CSS untuk ikon di dalam tombol Cliq Now */
+.cliq-now-button img {
+    max-width: 100%; /* Ukuran maksimum gambar */
+    height: 100%; /* Tinggi maksimum gambar */
+    vertical-align: middle; /* Memastikan ikon berada di tengah vertikal */
+    position: absolute; /* Menetapkan posisi absolut untuk ikon */
+    top: 30px; /* Posisi vertikal di tengah */
+    left: 85px; /* Posisi horizontal di sisi kiri */
+    transform: translateY(-50%); /* Menyesuaikan posisi ikon di tengah secara tepat */
+    object-fit: cover; /* Efek masking untuk gambar */
+    transition: opacity 0.3s ease; /* Animasi transisi opacity saat hover */
+    opacity: 1; /* Default opacity */
+}
+
+.cliq-now-button:hover img {
+    opacity: 0; /* Menghilangkan gambar saat tombol dihover */
+}
+
+/* CSS untuk icon baru dihover tombol Cliq Now */
+.cliq-now-button:hover::before {
+    content: '';
+    position: absolute; /* Menetapkan posisi absolut untuk ikon */
+    top: 55%; /* Posisi vertikal di tengah */
+    left: 110px; /* Posisi horizontal di sisi kiri */
+    transform: translateY(-50%); /* Menyesuaikan posisi ikon di tengah secara tepat */
+    width: 40px; /* Lebar ikon */
+    height: 40px; /* Tinggi ikon */
+    background-image: url('img/jempol.png'); /* Ganti dengan sumber gambar yang baru */
+    background-size: cover;
+}
+
+
+
+.image-container img {
+    max-width: 65%;
+    height: auto;
+    padding-left: 200px;
+}
+/* CSS untuk div blur-container */
+.blur-container {
+    background-image: url('img/background bottom.jpg'); /* Ganti dengan path yang sesuai */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* CSS untuk div rounded-container */
+.rounded-container {
+    background-color: rgba(255, 255, 255, 0); /* Warna background transparan */
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    
+    width: 70%;
+    height: 400px;
+    backdrop-filter: blur(30px); /* Efek blur */
+    
+}
+
+/* CSS untuk gambar di dalam rounded-container */
+.rounded-image {
+    width: 600px;
+    height: 600px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.rounded-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* CSS untuk teks di dalam rounded-container */
+.text-content {
+    max-width: 60%;
+}
+
+.text-content h1 {
+    margin-top: 20px;
+    color: #003744;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-content p {
+    color: #000000;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+
+
+.image-container1 img {
+    max-width: 65%;
+    height: auto;
+    padding-left: 200px;
+}
+/* CSS untuk div blur-container */
+.blur-container1 {
+    background-image: url('img/back2.png'); /* Ganti dengan path yang sesuai */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* CSS untuk div rounded-container */
+.rounded-container1 {
+    background-color: rgba(255, 255, 255, 0); /* Warna background transparan */
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 400px;
+    backdrop-filter: blur(30px); /* Efek blur */
+    flex-direction: row-reverse; /* Membalik urutan elemen */
+}
+
+.rounded-image1 {
+    width: 600px;
+    height: 600px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 20px; /* Mengubah margin-right menjadi margin-left */
+}
+
+.rounded-image1 img {
+    width: 100%;
+    height: auto;
+}
+
+/* CSS untuk teks di dalam rounded-container */
+.text-content1 {
+    max-width: 60%;
+}
+
+.text-content1 h1 {
+    margin-top: 20px;
+    color: #003744;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-content1 p {
+    color: #000000;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+.image-container2 img {
+    max-width: 65%;
+    height: auto;
+    padding-left: 200px;
+}
+/* CSS untuk div blur-container */
+.blur-container2 {
+    background-image: url('img/back3.png'); /* Ganti dengan path yang sesuai */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* CSS untuk div rounded-container */
+.rounded-container2 {
+    background-color: rgba(255, 255, 255, 0); /* Warna background transparan */
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    
+    width: 70%;
+    height: 400px;
+    backdrop-filter: blur(30px); /* Efek blur */
+    
+}
+
+/* CSS untuk gambar di dalam rounded-container */
+.rounded-image2 {
+    width: 600px;
+    height: 600px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.rounded-image2 img {
+    width: 100%;
+    height: auto;
+}
+
+/* CSS untuk teks di dalam rounded-container */
+.text-content2 {
+    max-width: 60%;
+}
+
+.text-content2 h1 {
+    margin-top: 20px;
+    color: #003744;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-content2 p {
+    color: #000000;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Penyesuaian untuk media query jika diperlukan */
+@media (max-width: 768px) {
+    .rounded-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        width: 90%;
+    }
+}
